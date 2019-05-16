@@ -1,0 +1,27 @@
+{
+    "name": "storyous/php-coding-standard",
+    "type": "phpcodesniffer-standard",
+    "description": "The Storyous Coding Standard.",
+    "keywords": [
+        "storyous",
+        "coding",
+        "standard",
+        "cs",
+        "code",
+        "style",
+        "sniffer",
+        "rules",
+        "sniffs",
+        "checks"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^7.1",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
+        "doctrine/coding-standard": "6.0.0",
+        "squizlabs/php_codesniffer": "^3.4.0"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
