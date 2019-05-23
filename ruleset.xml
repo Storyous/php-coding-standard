@@ -488,4 +488,10 @@
             <property name="spacesCountBeforeColon" value="0"/>
         </properties>
     </rule>
+
+    <rule ref="SlevomatCodingStandard.TypeHints">
+        <!-- TODO: remove after resolving legacy files -->
+        <exclude name="SlevomatCodingStandard.TypeHints.DeclareStrictTypes"/>
+    </rule>
+
 </ruleset>
