@@ -203,6 +203,7 @@
                 <element value="T_RETURN" />
             </property>
         </properties>
+        <exclude name="Squiz.WhiteSpace.ControlStructureSpacing.LineAfterClose" />
     </rule>
     <!-- Forbid fancy yoda conditions -->
     <rule ref="SlevomatCodingStandard.ControlStructures.DisallowYodaComparison"/>
@@ -492,6 +493,16 @@
     <rule ref="SlevomatCodingStandard.TypeHints">
         <!-- TODO: remove after resolving legacy files -->
         <exclude name="SlevomatCodingStandard.TypeHints.DeclareStrictTypes"/>
+        <!-- Allow int[], string[] etc. -->
+        <exclude name="SlevomatCodingStandard.TypeHints.DisallowArrayTypeHintSyntax"/>
+    </rule>
+
+    <rule ref="Squiz.WhiteSpace.ControlStructureSpacing">
+        <exclude name="Squiz.WhiteSpace.ControlStructureSpacing.SpacingBeforeClose" />
+    </rule>
+
+    <rule ref="Generic.Files.LineEndings">
+        <exclude name="Generic.Files.LineEndings.InvalidEOLChar" />
     </rule>
 
 </ruleset>
