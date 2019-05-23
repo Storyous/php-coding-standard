@@ -465,4 +465,27 @@
         <!-- turned off by PSR2 -> turning back on -->
         <severity>5</severity>
     </rule>
+
+    <rule ref="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly">
+        <!-- Don't require use statements for global functions like 'use function array_map;' -->
+        <exclude name="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly.ReferenceViaFallbackGlobalName"/>
+        <!-- Allow \DateTime and others without use statements  -->
+        <exclude name="SlevomatCodingStandard.Namespaces.ReferenceUsedNamesOnly.ReferenceViaFullyQualifiedName"/>
+    </rule>
+
+    <rule ref="SlevomatCodingStandard.Commenting.DocCommentSpacing">
+        <!-- Don't check an order of annotations -->
+        <exclude name="SlevomatCodingStandard.Commenting.DocCommentSpacing.IncorrectAnnotationsGroup"/>
+    </rule>
+
+    <rule ref="Generic.Formatting.SpaceAfterNot">
+        <!-- Don't require space after NOT operator -->
+        <exclude name="Generic.Formatting.SpaceAfterNot.Incorrect"/>
+    </rule>
+
+    <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHintSpacing">
+        <properties>
+            <property name="spacesCountBeforeColon" value="0"/>
+        </properties>
+    </rule>
 </ruleset>
