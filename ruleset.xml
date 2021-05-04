@@ -122,8 +122,6 @@
             <property name="linesCountBetweenUses" value="0"/>
         </properties>
     </rule>
-    <!-- Forbid dead code -->
-    <rule ref="SlevomatCodingStandard.Classes.UnusedPrivateElements"/>
     <!-- Forbid prefix and suffix "Abstract" for abstract classes -->
     <rule ref="SlevomatCodingStandard.Classes.SuperfluousAbstractClassNaming"/>
     <!-- Forbid prefix and suffix "Interface" for interfaces -->
@@ -194,15 +192,6 @@
     <rule ref="SlevomatCodingStandard.Commenting.RequireOneLinePropertyDocComment"/>
     <!-- Forbid assignments in conditions -->
     <rule ref="SlevomatCodingStandard.ControlStructures.AssignmentInCondition"/>
-    <!-- Require consistent spacing for control structures -->
-    <rule ref="SlevomatCodingStandard.ControlStructures.ControlStructureSpacing">
-        <properties>
-            <property name="tokensToCheck" type="array">
-                <element value="T_RETURN" />
-            </property>
-        </properties>
-        <exclude name="Squiz.WhiteSpace.ControlStructureSpacing.LineAfterClose" />
-    </rule>
     <!-- Forbid fancy yoda conditions -->
     <rule ref="SlevomatCodingStandard.ControlStructures.DisallowYodaComparison"/>
     <!-- Require usage of early exit -->
@@ -316,18 +305,6 @@
     <rule ref="SlevomatCodingStandard.TypeHints.ReturnTypeHintSpacing">
         <properties>
             <property name="spacesCountBeforeColon" value="1"/>
-        </properties>
-    </rule>
-    <!-- Require types to be written as natively if possible;
-         require iterable types to specify phpDoc with their content;
-         forbid useless/duplicated information in phpDoc -->
-    <rule ref="SlevomatCodingStandard.TypeHints.TypeHintDeclaration">
-        <properties>
-            <property name="allAnnotationsAreUseful" value="true"/>
-            <property name="enableEachParameterAndReturnInspection" value="true"/>
-            <property name="traversableTypeHints" type="array">
-                <element value="Doctrine\Common\Collections\Collection"/>
-            </property>
         </properties>
     </rule>
     <!-- Forbid useless @var for constants -->
@@ -493,9 +470,9 @@
         <exclude name="SlevomatCodingStandard.TypeHints.DeclareStrictTypes"/>
         <!-- Allow int[], string[] etc. -->
         <exclude name="SlevomatCodingStandard.TypeHints.DisallowArrayTypeHintSyntax"/>
-        <exclude name="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingTraversableParameterTypeHintSpecification"/>
-        <exclude name="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingTraversablePropertyTypeHintSpecification"/>
-        <exclude name="SlevomatCodingStandard.TypeHints.TypeHintDeclaration.MissingTraversableReturnTypeHintSpecification"/>
+        <exclude name="SlevomatCodingStandard.TypeHints.ParameterTypeHint.MissingTraversableTypeHintSpecification"/>
+        <exclude name="SlevomatCodingStandard.TypeHints.PropertyTypeHint.MissingTraversableTypeHintSpecification"/>
+        <exclude name="SlevomatCodingStandard.TypeHints.ReturnTypeHint.MissingTraversableTypeHintSpecification"/>
     </rule>
 
     <rule ref="Squiz.WhiteSpace.ControlStructureSpacing">
@@ -505,10 +482,11 @@
     <rule ref="Generic.Files.LineEndings">
         <exclude name="Generic.Files.LineEndings.InvalidEOLChar" />
     </rule>
-    
+
     <rule ref="SlevomatCodingStandard.Classes">
         <!-- Allow prefix and suffix "Exception" for exception classes -->
         <exclude name="SlevomatCodingStandard.Classes.SuperfluousExceptionNaming"/>
+        <exclude name="SlevomatCodingStandard.Classes.ClassStructure.IncorrectGroupOrder"/>
     </rule>
 
 </ruleset>
