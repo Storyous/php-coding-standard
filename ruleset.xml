@@ -487,6 +487,8 @@
         <!-- Allow prefix and suffix "Exception" for exception classes -->
         <exclude name="SlevomatCodingStandard.Classes.SuperfluousExceptionNaming"/>
         <exclude name="SlevomatCodingStandard.Classes.ClassStructure.IncorrectGroupOrder"/>
+        <!-- Allow public properties -->
+        <exclude name="SlevomatCodingStandard.Classes.ForbiddenPublicProperty.ForbiddenPublicProperty"/>
     </rule>
 
 </ruleset>
