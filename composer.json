@@ -17,7 +17,7 @@
     "license": "MIT",
     "require": {
         "php": "^7.4",
-        "slevomat/coding-standard": "^8.4"
+        "slevomat/coding-standard": "^8.24"
     },
     "config": {
         "sort-packages": true
